@@ -23,15 +23,7 @@ struct NewClientView: View {
     var body: some View {
         VStack{
             
-            
-            /*.ignoresSafeArea()
-             .frame(width: 80, height: 500)
-             .rotationEffect(.degrees(690))
-             .offset(y:2)
-             */
-            
             NavigationView{
-                
                 
                 List{
                     ForEach(clients) { client in
@@ -42,39 +34,31 @@ struct NewClientView: View {
                                 .resizable()
                                 .scaledToFill()
                             
-                            
                         }
                         .background(
                             
                             RoundedRectangle(cornerRadius: 30,style: .continuous)
                             
                                 .foregroundStyle(.linearGradient(colors: [.black, .white], startPoint: .topLeading, endPoint: .bottomTrailing)))
-                        
-                        
-                        
                     }
                     
                 }
                 
-                
-                
                 .navigationBarItems(trailing: NavigationLink(destination: CreateClientView()){
-                    // circlenavigationCrateClient(color: .black, navigationText: "Ny kund")
                     Image(systemName: "person.3.sequence.fill")
                         .foregroundColor(.green)
                         .padding()
                 })
-                
-                
             }
             .onAppear{
                 getChosenClient()
                 listenToClientInFirestore()
                 
-                
             }
         }
     }
+    
+
     struct clientDetailsView: View {
         var client: Client
         var body: some View {
@@ -84,7 +68,6 @@ struct NewClientView: View {
                     .background(
                         
                         RoundedRectangle(cornerRadius: 30,style: .continuous)
-                        
                             .foregroundStyle(.linearGradient(colors: [.orange, .red], startPoint: .topLeading, endPoint: .bottomTrailing)))
                 
                 Text("FÖRETAG ADRESS" + " \(client.CompanyAdres ?? "")")
@@ -102,7 +85,6 @@ struct NewClientView: View {
     
     
     func getChosenClient(){
-        
         for client in clients {
             //   print(user.email)
             // print(email)
@@ -110,12 +92,12 @@ struct NewClientView: View {
                 print("hittade!!")
                 print(client.name ?? "")
                 self.client = client
-                
-                
             }
         }
         
     }
+    
+    
     func listenToClientInFirestore() {
         
         db.collection("clients").addSnapshotListener { snapshot, err in
@@ -151,134 +133,12 @@ struct NewClientView: View {
     
 }
 
-struct CreateClientView: View{
-    var db = Firestore.firestore()
-    
-    @State var clientName = ""
-    @State var clientAddress = ""
-    @State var clientYourRefName = ""
-    @State  var organizationNumber = ""
-    @State var vatNumber = ""
-    
-    var body: some View{
-        
-        ZStack(){
-            
-            
-            Image("ClientPhoto")
-                .resizable()
-                .scaledToFill()
-            
-            
-            
-            
-            
-            
-            
-            VStack{
-                
-                TextField("kund ",text: $clientName)
-                    .padding()
-                    .background(  RoundedRectangle(cornerRadius: 10,style: .continuous)
-                        .foregroundStyle(.linearGradient(colors: [.white.opacity(0.3), .black.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing)))
-                    .foregroundColor(.black)
-                    .bold()
-                    .font(.headline)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                
-                
-                
-                TextField("Adress", text: $clientAddress)
-                    .padding()
-                    .background(  RoundedRectangle(cornerRadius: 10,style: .continuous)
-                        .foregroundStyle(.linearGradient(colors: [.white.opacity(0.3), .black.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing)))
-                    .foregroundColor(.black)
-                    .bold()
-                    .font(.headline)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                TextField("Referens", text: $clientYourRefName)
-                    .padding()
-                    .background(  RoundedRectangle(cornerRadius: 10,style: .continuous)
-                        .foregroundStyle(.linearGradient(colors: [.white.opacity(0.3), .black.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing)))
-                    .foregroundColor(.black)
-                    .bold()
-                    .font(.headline)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                TextField("Orgnummer", text: $organizationNumber)
-                    .padding()
-                    .background(  RoundedRectangle(cornerRadius: 10,style: .continuous)
-                        .foregroundStyle(.linearGradient(colors: [.white.opacity(0.3), .black.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing)))
-                    .foregroundColor(.yellow)
-                    .bold()
-                    .font(.headline)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                TextField("Momsnummer", text: $vatNumber)
-                    .padding()
-                    .background(  RoundedRectangle(cornerRadius: 10,style: .continuous)
-                        .foregroundStyle(.linearGradient(colors: [.white.opacity(0.3), .black.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing)))
-                    .foregroundColor(.black)
-                    .bold()
-                    .font(.headline)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                
-                
-                Button(action:{
-                    addNewClient()
-                    makeEmptyString()
-                },
-                       label: {Text("Spara Kund".uppercased())
-                        .padding()
-                        .frame(width:200  ,height: 55)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10,style: .continuous)
-                                .foregroundStyle(.linearGradient(colors: [.black, .white], startPoint: .topLeading, endPoint: .bottomTrailing)))
-                        .font(.headline)
-                })
-                
-                
-            }
-        }
-        .ignoresSafeArea()
-        
-    }
-    
-    
-    func addNewClient() {
-        
-        let client = Client( name: clientName, organizationNumber: organizationNumber, CompanyAdres: clientAddress, vat: vatNumber, referens: clientYourRefName)
-        
-        
-        
-        do{
-            _ = try    db.collection("clients").addDocument(from: client)
-            
-        }catch {
-            print("Error saving to DB")
-        }
-        
-    }
-    func makeEmptyString() {
-        clientName = ""
-        vatNumber = ""
-        clientAddress = ""
-        clientYourRefName = ""
-        organizationNumber = ""
-        
-    }
-    
-}
-
-
 struct NewCientView_Previews: PreviewProvider {
     static var previews: some View {
         NewClientView( client: Client())
     }
 }
+
 
 
 

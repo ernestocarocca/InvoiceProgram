@@ -12,27 +12,17 @@ import FirebaseAuth
 @main
 struct InvoiceProgramApp: App{
         
-    @UIApplicationDelegateAdaptor(AppDelagate.self) var appDelegate 
-  /*  init(){
-       
-        FirebaseApp.configure()
-        //Auth.auth().createUser(withEmail: Email, password: "" ) { authResult, error in
-          //if let
-        }
-
-    //    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-      
-  //  }*/
+    @UIApplicationDelegateAdaptor(AppDelagate.self) var appDelegate
    
     var body: some Scene {
         WindowGroup {
             let viewLoginUser = LoginUser()
             ContentView()
                 .environmentObject(viewLoginUser)
-            
         }
     }
 }
+
 class AppDelagate:NSObject ,UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DF725B52A307E3F00CBBC30 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF725B42A307E3F00CBBC30 /* SignInView.swift */; };
+		8DF725B72A307E5200CBBC30 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF725B62A307E5200CBBC30 /* SignUpView.swift */; };
+		8DF725B92A30829E00CBBC30 /* CreateClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF725B82A30829E00CBBC30 /* CreateClientView.swift */; };
 		BF0E12912989218C009245A5 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E12902989218C009245A5 /* Company.swift */; };
 		BF0E1293298927D9009245A5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E1292298927D9009245A5 /* Client.swift */; };
 		BF0E129529892A9C009245A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0E129429892A9C009245A5 /* User.swift */; };
@@ -21,10 +24,8 @@
 		BF20272A29783A300019A12B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF20272929783A300019A12B /* GoogleService-Info.plist */; };
 		BF9596A4299449F300E48802 /* SalaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9596A3299449F300E48802 /* SalaryView.swift */; };
 		BF9596A62994A2E900E48802 /* NewInvoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9596A52994A2E900E48802 /* NewInvoice.swift */; };
-		BF9596A82994ABFB00E48802 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9596A72994ABFB00E48802 /* ListView.swift */; };
 		BF9596AA2995031300E48802 /* InvoiceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9596A92995031300E48802 /* InvoiceDetails.swift */; };
 		BF97E02729A1670B00A779DD /* PdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97E02629A1670B00A779DD /* PdfView.swift */; };
-		BFA23FAC299B9B2700110905 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA23FAB299B9B2700110905 /* FirebaseManager.swift */; };
 		BFA23FB0299D284D00110905 /* NewClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA23FAF299D284D00110905 /* NewClientView.swift */; };
 		BFB10FEF298A59AE00F33913 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB10FEE298A59AE00F33913 /* LoginUser.swift */; };
 		BFB88326298B9FD700400683 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BFB88325298B9FD700400683 /* FirebaseAuth */; };
@@ -52,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DF725B42A307E3F00CBBC30 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		8DF725B62A307E5200CBBC30 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		8DF725B82A30829E00CBBC30 /* CreateClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClientView.swift; sourceTree = "<group>"; };
 		BF0E12902989218C009245A5 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		BF0E1292298927D9009245A5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		BF0E129429892A9C009245A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -69,10 +73,8 @@
 		BF20272929783A300019A12B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF9596A3299449F300E48802 /* SalaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryView.swift; sourceTree = "<group>"; };
 		BF9596A52994A2E900E48802 /* NewInvoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoice.swift; sourceTree = "<group>"; };
-		BF9596A72994ABFB00E48802 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		BF9596A92995031300E48802 /* InvoiceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDetails.swift; sourceTree = "<group>"; };
 		BF97E02629A1670B00A779DD /* PdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfView.swift; sourceTree = "<group>"; };
-		BFA23FAB299B9B2700110905 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		BFA23FAF299D284D00110905 /* NewClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientView.swift; sourceTree = "<group>"; };
 		BFB10FEE298A59AE00F33913 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,10 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				BFB10FEE298A59AE00F33913 /* LoginUser.swift */,
-				BFA23FAB299B9B2700110905 /* FirebaseManager.swift */,
 				BF9596A52994A2E900E48802 /* NewInvoice.swift */,
 				BF20272129782A140019A12B /* Invoice.swift */,
-				BF9596A72994ABFB00E48802 /* ListView.swift */,
 				BF0E1292298927D9009245A5 /* Client.swift */,
 				BF0E129429892A9C009245A5 /* User.swift */,
 				BF2026D9297824FA0019A12B /* InvoiceProgram */,
@@ -139,9 +139,12 @@
 			children = (
 				BF0E12902989218C009245A5 /* Company.swift */,
 				BF2026DA297824FA0019A12B /* InvoiceProgramApp.swift */,
+				8DF725B62A307E5200CBBC30 /* SignUpView.swift */,
 				BF2026DC297824FA0019A12B /* ContentView.swift */,
+				8DF725B42A307E3F00CBBC30 /* SignInView.swift */,
 				BFA23FAF299D284D00110905 /* NewClientView.swift */,
 				BF9596A92995031300E48802 /* InvoiceDetails.swift */,
+				8DF725B82A30829E00CBBC30 /* CreateClientView.swift */,
 				BF9596A3299449F300E48802 /* SalaryView.swift */,
 				BF2026DE297825000019A12B /* Assets.xcassets */,
 				BF20272929783A300019A12B /* GoogleService-Info.plist */,
@@ -319,18 +322,19 @@
 			files = (
 				BFB10FEF298A59AE00F33913 /* LoginUser.swift in Sources */,
 				BF9596A62994A2E900E48802 /* NewInvoice.swift in Sources */,
-				BF9596A82994ABFB00E48802 /* ListView.swift in Sources */,
 				BF2026DD297824FA0019A12B /* ContentView.swift in Sources */,
 				BF9596AA2995031300E48802 /* InvoiceDetails.swift in Sources */,
 				BF20272229782A140019A12B /* Invoice.swift in Sources */,
 				BFA23FB0299D284D00110905 /* NewClientView.swift in Sources */,
-				BFA23FAC299B9B2700110905 /* FirebaseManager.swift in Sources */,
 				BF0E129529892A9C009245A5 /* User.swift in Sources */,
 				BF9596A4299449F300E48802 /* SalaryView.swift in Sources */,
 				BF2026DB297824FA0019A12B /* InvoiceProgramApp.swift in Sources */,
 				BF97E02729A1670B00A779DD /* PdfView.swift in Sources */,
+				8DF725B72A307E5200CBBC30 /* SignUpView.swift in Sources */,
 				BF0E1293298927D9009245A5 /* Client.swift in Sources */,
 				BF0E12912989218C009245A5 /* Company.swift in Sources */,
+				8DF725B92A30829E00CBBC30 /* CreateClientView.swift in Sources */,
+				8DF725B52A307E3F00CBBC30 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

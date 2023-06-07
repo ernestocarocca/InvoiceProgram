@@ -58,14 +58,12 @@ struct NewInvoice: View {
             }
         }
         
-        
-        
         //  TextField("Belopp", text: $createNewInvoice)
         Button{
             let invoiceAmountDouble = Double(invoiceAmount)
             
             if(getChosenClient()){
-                addNewInvoice(invoiceAmount: invoiceAmountDouble ?? 0.0,
+                            addNewInvoice(invoiceAmount: invoiceAmountDouble ?? 0.0,
                               cli:  Client( name: client?.name, organizationNumber: client?.organizationNumber, CompanyAdres: client?.CompanyAdres, vat: client?.vat, personalId: client?.personalId, referens: client?.referens),
                               user:User(email: user.email),
                               jobAssigment: jobAssignment, workHour: workedHour,
@@ -79,8 +77,6 @@ struct NewInvoice: View {
             
             //newInvoiceNummer()
         } label: {
-            
-            
             Text("Spara Faktura")
                 .foregroundColor(.black)
                 .background(.linearGradient(colors: [.orange, .red], startPoint: .topLeading, endPoint: .bottomTrailing))
@@ -115,10 +111,8 @@ struct NewInvoice: View {
     
     
     func listenToUserInFirestore()  {
-        
         db.collection("users").addSnapshotListener { snapshot, err in
             guard let snapshot = snapshot else {return}
-            
             if let err = err {
                 print("Error getting document \(err)")
             } else {
@@ -138,13 +132,12 @@ struct NewInvoice: View {
                     case .failure(let error) :
                         print("Error decoding item: \(error)")
                     }
-                    
                 }
-                
             }
         }
-        
     }
+    
+    //Hämtar hem kunder via firebase/firestore
     func listenToClientInFirestore()  {
         
         db.collection("clients").addSnapshotListener { snapshot, err in
@@ -172,7 +165,6 @@ struct NewInvoice: View {
                 
             }
         }
-        
     }
     
     
@@ -190,6 +182,7 @@ struct NewInvoice: View {
         }
         return false
     }
+    
     func getLastInvoiceNumber(completion: @escaping (Int) -> Void) {
         db.collection("invoices")
             .order(by: "invoiceNummer", descending: true)
@@ -204,6 +197,7 @@ struct NewInvoice: View {
                 }
             }
     }
+    
     func makeEmptyString() {
         clientName = ""
         invoiceAmount  = ""
@@ -213,12 +207,3 @@ struct NewInvoice: View {
         
     }
 }
-
-
-
-/*struct NewInvoice_Previews: PreviewProvider {
- static var previews: some View {
- NewInvoice()
- }
- 
- }*/
