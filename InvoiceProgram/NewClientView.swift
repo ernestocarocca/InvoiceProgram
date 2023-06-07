@@ -125,12 +125,7 @@ struct NewClientView: View {
                 
             }
         }
-        
-        
-        
     }
-    
-    
 }
 
 struct NewCientView_Previews: PreviewProvider {
@@ -138,11 +133,6 @@ struct NewCientView_Previews: PreviewProvider {
         NewClientView( client: Client())
     }
 }
-
-
-
-
-
 
 
 struct circlenavigationCrateClient: View{
@@ -161,9 +151,6 @@ struct circlenavigationCrateClient: View{
                 .font(.system(size: 10,weight: .bold))
                 .bold()
         }
-        
-        
-        
-        
+           
     }
 }

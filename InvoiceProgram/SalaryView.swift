@@ -11,9 +11,6 @@ struct SalaryView: View {
     var body: some View {
         ZStack {
             
-      
-            
-            
                     Image("salaray")
                         .resizable()
                         .scaledToFill()
@@ -39,9 +36,7 @@ struct SalaryView: View {
                 .font(.headline)
                
                 }
-      
-       
-        
+
             }
         
 }

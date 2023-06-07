@@ -94,7 +94,6 @@ struct CreateClientView: View{
                         .font(.headline)
                 })
                 
-                
             }
         }
         .ignoresSafeArea()
